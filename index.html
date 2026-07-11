@@ -215,11 +215,11 @@ html, body, #map {
             }
         }
         var zoomControl = L.control.zoom({
-            position: 'topleft'
+            position: 'bottomleft'
         }).addTo(map);
         L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
         var measureControl = new L.Control.Measure({
-            position: 'topleft',
+            position: 'bottomleft',
             primaryLengthUnit: 'meters',
             secondaryLengthUnit: 'kilometers',
             primaryAreaUnit: 'sqmeters',
@@ -451,6 +451,7 @@ html, body, #map {
             //collapseAll: 'Collapse all',
             //expandAll: 'Expand all',
             collapsed: true,
+			position: 'bottomright',
         });
         lay.addTo(map);
         setBounds();
