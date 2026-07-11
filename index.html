@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
@@ -26,18 +26,22 @@ html, body, #map {
 
 #header {
     position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 10px;
+    left: 10px;
+    right: 10px;
+
     z-index: 1000;
+
     background: rgba(54,44,34,0.92);
     color: #f1e8d8;
-    padding: 15px 28px;
+
+    padding: 12px 18px;
     border-radius: 10px;
+
     text-align: center;
+
     box-shadow: 0 4px 15px rgba(0,0,0,0.35);
     border: 1px solid #7a6648;
-    min-width: 420px;
 }
 
 #header h1 {
@@ -74,8 +78,35 @@ html, body, #map {
     background: #f4f0e7;
     color: #3b3329;
 }
-</style>
+@media (max-width: 768px) {
 
+    #header {
+        padding: 10px;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+    }
+
+    #header h1 {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    #header .subtitle {
+        font-size: 11px;
+    }
+
+    #header .credits {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .leaflet-control-layers {
+        max-width: 220px;
+        font-size: 12px;
+    }
+}
+</style>
         <title>Proyecto Arqueológico ¿Cuántos Fueron?</title>
     </head>
     <body>
